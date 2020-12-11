@@ -9,19 +9,7 @@ const {
   firstCharacters,
 } = require('./lib/strings');
 
-const {
-  add,
-  subtract,
-  multiply,
-  divide,
-  power,
-  round,
-  roundUp,
-  roundDown,
-  absolute,
-  quotient,
-  remainder,
-} = require('./lib/numbers');
+const { add, subtract, multiply, divide, remainder } = require('./lib/numbers');
 
 const app = express();
 
@@ -95,6 +83,22 @@ app.post('/numbers/divide', (req, res) => {
     res.status(400).send({ error: 'Parameters "a" and "b" must be valid numbers.' });
   }
   res.status(200).send({ result: divide(a, b) });
+});
+
+app.post('/numbers/remainder', (req, res) => {
+  const a = parseInt(req.body.a);
+  const b = parseInt(req.body.b);
+
+  if (b === 0) {
+    res.status(400).send({ error: 'Unable to divide by 0.' });
+  }
+  if ((!req.body.a && req.body.a !== 0) || (!req.body.b && req.body.a !== 0)) {
+    res.status(400).send({ error: 'Parameters "a" and "b" are required.' });
+  }
+  if (Number.isNaN(a) || Number.isNaN(b)) {
+    res.status(400).send({ error: 'Parameters must be valid numbers.' });
+  }
+  res.status(200).send({ result: remainder(a, b) });
 });
 
 module.exports = app;
