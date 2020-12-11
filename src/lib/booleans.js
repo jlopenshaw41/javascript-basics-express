@@ -45,13 +45,14 @@ const startsWith = (char, string) => {
 };
 
 const containsVowels = string => {
+  // eslint-disable-next-line no-param-reassign
   string = string.toLowerCase();
   if (
-    string.includes("a") ||
-    string.includes("e") ||
-    string.includes("i") ||
-    string.includes("o") ||
-    string.includes("o")
+    string.includes('a') ||
+    string.includes('e') ||
+    string.includes('i') ||
+    string.includes('o') ||
+    string.includes('o')
   ) {
     return true;
   }
@@ -80,5 +81,5 @@ module.exports = {
   isSquare,
   startsWith,
   containsVowels,
-  isLowerCase
+  isLowerCase,
 };

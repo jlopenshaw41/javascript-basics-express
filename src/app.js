@@ -14,20 +14,28 @@ const { add, subtract, multiply, divide, remainder } = require('./lib/numbers');
 const {
   getNthElement,
   arrayToCSVString,
-  csvStringToArray,
   addToArray,
-  addToArray2,
   removeNthElement,
-  numbersToStrings,
-  uppercaseWordsInArray,
-  reverseWordsInArray,
-  onlyEven,
-  removeNthElement2,
   elementsStartingWithAVowel,
-  removeSpaces,
-  sumNumbers,
-  sortByLastLetter,
 } = require('./lib/arrays');
+
+const {
+  negate,
+  both,
+  either,
+  none,
+  one,
+  truthiness,
+  isEqual,
+  isGreaterThan,
+  isLessThanOrEqualTo,
+  isOdd,
+  isEven,
+  isSquare,
+  startsWith,
+  containsVowels,
+  isLowerCase,
+} = require('./lib/booleans');
 
 const app = express();
 
@@ -140,6 +148,30 @@ app.post('/arrays/remove-element', (req, res) => {
     res.status(200).send({ result: removeNthElement(0, req.body.array) });
   }
   res.status(200).send({ result: removeNthElement(req.query.index, req.body.array) });
+});
+
+app.post('/booleans/negate', (req, res) => {
+  res.status(200).send({ result: negate(req.body.value) });
+});
+
+app.post('/booleans/truthiness', (req, res) => {
+  res.status(200).send({ result: truthiness(req.body.value) });
+});
+
+app.get('/booleans/is-odd/:number', (req, res) => {
+  const number = parseInt(req.params.number);
+
+  if (Number.isNaN(number)) {
+    res.status(400).send({ error: 'Parameter must be a number.' });
+  }
+  res.status(200).send({ result: isOdd(number) });
+});
+
+app.get('/booleans/:string/starts-with/:character', (req, res) => {
+  if (req.params.character.length > 1) {
+    res.status(400).send({ error: 'Parameter "character" must be a single character.' });
+  }
+  res.status(200).send({ result: startsWith(req.params.character, req.params.string) });
 });
 
 module.exports = app;
