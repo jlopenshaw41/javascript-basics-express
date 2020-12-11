@@ -19,23 +19,7 @@ const {
   elementsStartingWithAVowel,
 } = require('./lib/arrays');
 
-const {
-  negate,
-  both,
-  either,
-  none,
-  one,
-  truthiness,
-  isEqual,
-  isGreaterThan,
-  isLessThanOrEqualTo,
-  isOdd,
-  isEven,
-  isSquare,
-  startsWith,
-  containsVowels,
-  isLowerCase,
-} = require('./lib/booleans');
+const { negate, truthiness, isOdd, startsWith } = require('./lib/booleans');
 
 const app = express();
 
