@@ -2,7 +2,7 @@ const express = require('express');
 
 const booleansRouter = express.Router();
 
-const { negate, truthiness, isOdd, startsWith } = require('./lib/booleans');
+const { negate, truthiness, isOdd, startsWith } = require('../lib/booleans');
 
 booleansRouter.post('/negate', (req, res) => {
   res.status(200).send({ result: negate(req.body.value) });

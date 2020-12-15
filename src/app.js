@@ -1,12 +1,12 @@
 const express = require('express');
 
-const stringsRouter = require('./stringsRouter');
+const stringsRouter = require('./routes/stringsRouter');
 
-const numbersRouter = require('./numbersRouter');
+const numbersRouter = require('./routes/numbersRouter');
 
-const arraysRouter = require('./arraysRouter');
+const arraysRouter = require('./routes/arraysRouter');
 
-const booleansRouter = require('./booleansRouter');
+const booleansRouter = require('./routes/booleansRouter');
 
 const app = express();
 

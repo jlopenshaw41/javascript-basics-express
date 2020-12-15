@@ -2,7 +2,7 @@ const express = require('express');
 
 const numbersRouter = express.Router();
 
-const { add, subtract, multiply, divide, remainder } = require('./lib/numbers');
+const { add, subtract, multiply, divide, remainder } = require('../lib/numbers');
 
 numbersRouter.get('/add/:firstNumber/and/:secondNumber', (req, res) => {
   const firstInteger = parseInt(req.params.firstNumber, 10);

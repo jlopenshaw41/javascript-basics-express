@@ -8,7 +8,7 @@ const {
   lowercase,
   firstCharacter,
   firstCharacters,
-} = require('./lib/strings');
+} = require('../lib/strings');
 
 stringsRouter.get('/hello/:string', (req, res) => {
   const string = sayHello(req.params.string);
