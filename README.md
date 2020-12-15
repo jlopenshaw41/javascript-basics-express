@@ -1,38 +1,50 @@
-# JavaScript Basics in Express
+# JavaScript Basics - A Web API using Express
 
-## Getting started
+This is a web API created using Express. It takes a series of [basic JavaScript functions](https://github.com/jlopenshaw41/javascript-basics), created at the beginning of the bootcamp course, and makes them accessible to other applications via a web API.
 
-Ensure your Visual Studio Code application is up to date, and that you have the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) installed and enabled.
+This is a project completed as part of the Software Engineering FastTrack course at Manchester Codes.
+## Table of contents
 
-Run the commands below inside your `Projects` folder.
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Languages](#languages)
+* [Status](#status)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
 
-```bash
-git clone git@github.com:MCRcodes/javascript-basics-express.git
-cd your-project-folder-name
-npm install
-```
+## General info
 
-## Copy over your JavaScript Basics code
+ The project covered the following concepts:
 
-:rotating_light: **Important!**
+* Web servers and web APIs - what they are and why we need them
+* Creating a web server using Express
+* HTTP requests and responses
+* Routing
+* Retrieving route params, query params and body params from HTTP requests
+* Controller functions
+* Middleware
+## Technologies
 
-This exercise makes use of your previous `javascript-basics` code. Copy the files from that project's `src/` folder into a new `lib/` directory in this repository's `src` directory. You should end up with the following file structure in this project:
+* Node and Node Package Manager
+* Jest
+* Git & GitHub
+* Express
+* nodemon
+* supertest
+## Languages
 
-```
-src
-├── app.js
-└── lib
-    ├── arrays.js
-    ├── booleans.js
-    ├── numbers.js
-    ├── objects.js
-    └── strings.js
-```
+* JavaScript
 
-## Running tests
+## Status
 
-You can run tests with the `npm test` command.
+Project is: _COMPLETE_
 
-## Remember: READMEs are important!
+## Inspiration
 
-When you're finished, be sure to rewrite this one so it's more specific to your project.
+Project created as part of Manchester Codes Software Engineering FastTrack course, Backend Basics module.
+
+An extra thank you to [Rita Łyczywek](https://www.flynerd.pl/) for this excellent README template
+
+## Contact
+
+Created by [@jlopenshaw](https://twitter.com/Jlopenshaw) - feel free to contact me about the project
